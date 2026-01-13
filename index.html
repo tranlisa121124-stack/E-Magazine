@@ -14,11 +14,19 @@ body{
 .header{
   background:#000;
   color:#fff;
-  padding:30px;
+  padding:30px 15px;
   text-align:center;
 }
+.header h1{
+  margin:0;
+  font-size:30px;
+}
+.header p{
+  margin:8px 0 0;
+  opacity:.8;
+}
 .container{
-  max-width:1000px;
+  max-width:1100px;
   margin:30px auto;
   padding:0 15px;
   display:grid;
@@ -30,6 +38,7 @@ body{
   border-radius:14px;
   overflow:hidden;
   box-shadow:0 4px 12px rgba(0,0,0,.15);
+  position:relative;
 }
 .card img{
   width:100%;
@@ -40,30 +49,77 @@ body{
 }
 .card .info h3{
   margin:0;
+  font-size:18px;
 }
 .card .info p{
-  margin:5px 0 0;
-  color:#666;
+  margin:6px 0 0;
   font-size:14px;
+  color:#666;
+}
+.badge{
+  position:absolute;
+  top:10px;
+  left:10px;
+  background:#e53935;
+  color:#fff;
+  font-size:12px;
+  padding:5px 10px;
+  border-radius:20px;
 }
 a{
   text-decoration:none;
   color:inherit;
+}
+.footer{
+  text-align:center;
+  padding:20px;
+  font-size:13px;
+  color:#777;
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <div class="header">
   <h1>E-MAGAZINE</h1>
-  <p>Trang chọn số</p>
+  <p>Danh sách các số phát hành</p>
 </div>
 
+<!-- DANH SÁCH SỐ -->
 <div class="container">
 
-  <!-- Tạm để trống, sẽ thêm số sau -->
+  <!-- SỐ MỚI NHẤT -->
+  <a href="so1/">
+    <div class="card">
+      <div class="badge">MỚI NHẤT</div>
+      <img src="so1/cover.jpg" alt="Số 01">
+      <div class="info">
+        <h3>Số 01</h3>
+        <p>Tuần 1 – 2026</p>
+      </div>
+    </div>
+  </a>
 
+  <!-- SỐ CŨ HƠN -->
+  <!--
+  <a href="so2/">
+    <div class="card">
+      <img src="so2/cover.jpg" alt="Số 02">
+      <div class="info">
+        <h3>Số 02</h3>
+        <p>Tuần 2 – 2026</p>
+      </div>
+    </div>
+  </a>
+  -->
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  © 2026 E-Magazine
 </div>
 
 </body>
