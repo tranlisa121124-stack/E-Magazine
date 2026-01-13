@@ -4,122 +4,27 @@
 <meta charset="UTF-8">
 <title>E-Magazine</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <style>
-body{
-  margin:0;
-  font-family: Arial, sans-serif;
-  background:#f2f2f2;
-}
-.header{
-  background:#000;
-  color:#fff;
-  padding:30px 15px;
-  text-align:center;
-}
-.header h1{
-  margin:0;
-  font-size:30px;
-}
-.header p{
-  margin:8px 0 0;
-  opacity:.8;
-}
-.container{
-  max-width:1100px;
-  margin:30px auto;
-  padding:0 15px;
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
-  gap:20px;
-}
-.card{
-  background:#fff;
-  border-radius:14px;
-  overflow:hidden;
-  box-shadow:0 4px 12px rgba(0,0,0,.15);
-  position:relative;
-}
-.card img{
-  width:100%;
-  display:block;
-}
-.card .info{
-  padding:15px;
-}
-.card .info h3{
-  margin:0;
-  font-size:18px;
-}
-.card .info p{
-  margin:6px 0 0;
-  font-size:14px;
-  color:#666;
-}
-.badge{
-  position:absolute;
-  top:10px;
-  left:10px;
-  background:#e53935;
-  color:#fff;
-  font-size:12px;
-  padding:5px 10px;
-  border-radius:20px;
-}
-a{
-  text-decoration:none;
-  color:inherit;
-}
-.footer{
-  text-align:center;
-  padding:20px;
-  font-size:13px;
-  color:#777;
-}
+body{margin:0;font-family:Arial;background:#f4f4f4}
+h1{text-align:center;margin:20px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;padding:20px}
+.card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,.15)}
+.card img{width:100%;height:260px;object-fit:cover}
+.card h3{text-align:center;margin:10px 0}
+a{text-decoration:none;color:#000}
 </style>
 </head>
-
 <body>
 
-<!-- HEADER -->
-<div class="header">
-  <h1>E-MAGAZINE</h1>
-  <p>Danh sách các số phát hành</p>
-</div>
+<h1>E-MAGAZINE</h1>
 
-<!-- DANH SÁCH SỐ -->
-<div class="container">
-
-  <!-- SỐ MỚI NHẤT -->
+<div class="grid">
   <a href="so1/">
     <div class="card">
-      <div class="badge">MỚI NHẤT</div>
-      <img src="so1/cover.jpg" alt="Số 01">
-      <div class="info">
-        <h3>Số 01</h3>
-        <p>Tuần 1 – 2026</p>
-      </div>
+      <img src="so1/cover.jpg" alt="">
+      <h3>Số 01</h3>
     </div>
   </a>
-
-  <!-- SỐ CŨ HƠN -->
-  <!--
-  <a href="so2/">
-    <div class="card">
-      <img src="so2/cover.jpg" alt="Số 02">
-      <div class="info">
-        <h3>Số 02</h3>
-        <p>Tuần 2 – 2026</p>
-      </div>
-    </div>
-  </a>
-  -->
-
-</div>
-
-<!-- FOOTER -->
-<div class="footer">
-  © 2026 E-Magazine
 </div>
 
 </body>
