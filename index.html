@@ -7,20 +7,30 @@
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
+/* ======================
+   BIẾN MÀU THƯƠNG HIỆU
+====================== */
 :root{
   --green-dark:#1F6E43;
   --green-light:#2FBF71;
-  --gray-text:#333;
+  --gray-bg:#f4f7f5;
+  --text-dark:#333;
 }
 
+/* ======================
+   RESET & BODY
+====================== */
 body{
   margin:0;
   font-family:'Merriweather', serif;
-  color:var(--gray-text);
+  color:var(--text-dark);
   line-height:1.9;
+  background:#fff;
 }
 
-/* HEADER */
+/* ======================
+   HEADER
+====================== */
 header{
   display:flex;
   align-items:center;
@@ -33,15 +43,18 @@ header img{
   margin-right:20px;
 }
 header h1{
-  font-size:1.5rem;
+  font-size:1.4rem;
   color:var(--green-dark);
+  margin:0;
 }
 
-/* COVER */
+/* ======================
+   COVER
+====================== */
 .cover{
   height:90vh;
   background:
-    linear-gradient(120deg, rgba(31,110,67,.9), rgba(47,191,113,.7)),
+    linear-gradient(120deg, rgba(31,110,67,.9), rgba(47,191,113,.75)),
     url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6") center/cover;
   display:flex;
   align-items:center;
@@ -50,11 +63,14 @@ header h1{
   color:#fff;
 }
 .cover h2{
-  font-size:3.5rem;
+  font-size:3.2rem;
   max-width:900px;
+  padding:0 20px;
 }
 
-/* CONTENT */
+/* ======================
+   CONTENT
+====================== */
 .section{
   max-width:900px;
   margin:auto;
@@ -66,73 +82,21 @@ header h1{
   margin:40px 0;
 }
 
-/* QUOTE */
+/* ======================
+   QUOTE
+====================== */
 .quote{
   border-left:6px solid var(--green-light);
   padding-left:25px;
-  font-size:1.8rem;
+  font-size:1.6rem;
   color:var(--green-dark);
   margin:60px 0;
+  font-style:italic;
 }
 
-/* FULL IMAGE */
+/* ======================
+   FULL IMAGE
+====================== */
 .full{
   height:80vh;
-  background:url("https://images.unsplash.com/photo-1598514982259-3fdfdd7b3c39") center/cover;
-}
-
-/* FOOTER */
-footer{
-  background:var(--green-dark);
-  color:#e5f5ec;
-  text-align:center;
-  padding:40px 20px;
-}
-footer img{
-  height:50px;
-  margin-bottom:10px;
-}
-</style>
-</head>
-
-<body>
-
-<header>
-  <img src="logo.png" alt="Khuyến nông Việt Nam">
-  <h1>E-Magazine Khuyến nông Việt Nam</h1>
-</header>
-
-<section class="cover">
-  <h2>Chuyển đổi số trong nông nghiệp – Từ ruộng đồng đến dữ liệu</h2>
-</section>
-
-<section class="section">
-  <p>
-    Trải qua hơn ba thập kỷ hình thành và phát triển,
-    hệ thống khuyến nông Việt Nam đã và đang giữ vai trò
-    cầu nối giữa tri thức khoa học và người nông dân.
-  </p>
-
-  <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
-
-  <div class="quote">
-    “Khuyến nông không chỉ là hướng dẫn kỹ thuật,
-    mà là đồng hành cùng người nông dân trong kỷ nguyên số.”
-  </div>
-
-  <p>
-    Ứng dụng công nghệ số, dữ liệu lớn và truyền thông đa phương tiện
-    đang giúp công tác khuyến nông lan tỏa nhanh hơn,
-    chính xác hơn và bền vững hơn.
-  </p>
-</section>
-
-<section class="full"></section>
-
-<footer>
-  <img src="logo.png">
-  <p>Khuyến nông Việt Nam – Thành lập 1993</p>
-</footer>
-
-</body>
-</html>
+  background:url("https://images.unsplash.com/photo-1598514982259-3f
