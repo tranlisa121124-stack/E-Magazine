@@ -2,122 +2,159 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>E-Magazine Demo</title>
+<title>E-Magazine Khuyến nông Việt Nam</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
-body {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  line-height: 1.8;
-  color: #222;
+:root{
+  --green-dark:#1F7A4D;
+  --green-light:#4ADE80;
+  --yellow-light:#FDE68A;
+  --yellow-dark:#FACC15;
+  --cream:#FFFBEB;
+  --text:#2f2f2f;
 }
 
-/* HERO */
-.hero {
-  height: 100vh;
-  background: linear-gradient(
-    rgba(0,0,0,0.4),
-    rgba(0,0,0,0.6)
-  ),
-  url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee') center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
+*{box-sizing:border-box;}
+
+body{
+  margin:0;
+  font-family:'Montserrat', sans-serif;
+  color:var(--text);
+  background:var(--cream);
+  line-height:1.85;
 }
 
-.hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 4rem;
-  max-width: 900px;
+/* ================= HEADER ================= */
+header{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  padding:20px 40px;
+  background:linear-gradient(90deg,var(--green-dark),var(--green-light));
+}
+header img{
+  height:60px;
+  background:#fff;
+  padding:8px 14px;
+  border-radius:10px;
+}
+header h1{
+  color:#fff;
+  font-size:1.4rem;
+  margin:0;
 }
 
-.hero p {
-  font-size: 1.2rem;
-  opacity: 0.9;
+/* ================= COVER ================= */
+.cover{
+  height:90vh;
+  background:
+    linear-gradient(rgba(31,122,77,.7), rgba(250,204,21,.6)),
+    url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6") center/cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:20px;
+}
+.cover h2{
+  font-family:'Playfair Display', serif;
+  font-size:3.4rem;
+  color:#fff;
+  max-width:900px;
 }
 
-/* CONTENT */
-.section {
-  max-width: 900px;
-  margin: auto;
-  padding: 80px 20px;
+/* ================= CONTENT ================= */
+.section{
+  max-width:900px;
+  margin:auto;
+  padding:90px 20px;
+}
+.section img{
+  width:100%;
+  border-radius:14px;
+  margin:45px 0;
+  box-shadow:0 10px 30px rgba(0,0,0,.15);
 }
 
-.section img {
-  width: 100%;
-  border-radius: 12px;
-  margin: 40px 0;
+/* ================= QUOTE ================= */
+.quote{
+  background:linear-gradient(90deg,var(--yellow-light),#fff);
+  border-left:6px solid var(--yellow-dark);
+  padding:30px;
+  font-size:1.6rem;
+  font-family:'Playfair Display', serif;
+  color:var(--green-dark);
+  margin:70px 0;
+  border-radius:12px;
 }
 
-/* QUOTE */
-.quote {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  color: #c026d3;
-  border-left: 5px solid #f472b6;
-  padding-left: 20px;
-  margin: 60px 0;
+/* ================= FULL IMAGE ================= */
+.full{
+  height:80vh;
+  background:
+    linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),
+    url("https://images.unsplash.com/photo-1598514982259-3fdfdd7b3c39") center/cover;
 }
 
-/* FULL IMAGE */
-.full-image {
-  height: 80vh;
-  background-size: cover;
-  background-position: center;
+/* ================= FOOTER ================= */
+footer{
+  background:linear-gradient(180deg,var(--green-dark),#145c3a);
+  color:#f0fff4;
+  text-align:center;
+  padding:70px 20px 40px;
 }
 
-/* FOOTER */
-.footer {
-  background: #111;
-  color: #aaa;
-  text-align: center;
-  padding: 40px;
+.footer-logo{
+  display:inline-block;
+  background:#fff;
+  padding:16px 30px;
+  border-radius:14px;
+  margin-bottom:20px;
+  box-shadow:0 8px 20px rgba(0,0,0,.25);
+}
+
+.footer-logo img{
+  height:60px;
+}
+
+footer h3{
+  margin:10px 0;
+  font-size:1.2rem;
+}
+
+footer p{
+  max-width:700px;
+  margin:10px auto;
+  font-size:.95rem;
+}
+
+.footer-bottom{
+  margin-top:35px;
+  font-size:.85rem;
+  opacity:.85;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px){
+  .cover h2{font-size:2.2rem;}
+  header{flex-direction:column;text-align:center;}
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<section class="hero">
-  <div>
-    <h1>Nông thôn mới – Khi công nghệ chạm vào ruộng đồng</h1>
-    <p>E-Magazine | 2026</p>
-  </div>
+<header>
+  <img src="logo.png" alt="Khuyến nông Việt Nam">
+  <h1>E-Magazine Khuyến nông Việt Nam</h1>
+</header>
+
+<section class="cover">
+  <h2>Nông nghiệp xanh – Công nghệ số – Phát triển bền vững</h2>
 </section>
 
-<!-- CONTENT -->
 <section class="section">
   <p>
-    Giữa những thửa ruộng xanh non, người nông dân hôm nay không còn đơn độc.
-    Công nghệ, dữ liệu và tri thức đang dần thay đổi bộ mặt nông thôn Việt Nam.
-  </p>
-
-  <img src="https://images.unsplash.com/photo-1598514982259-3fdfdd7b3c39">
-
-  <div class="quote">
-    “Chuyển đổi số không lấy đi truyền thống – nó làm truyền thống sống lâu hơn.”
-  </div>
-
-  <p>
-    Từ hệ thống tưới thông minh đến nhật ký điện tử,
-    từng bước nhỏ đang tạo nên sự thay đổi lớn cho nền nông nghiệp bền vững.
-  </p>
-</section>
-
-<!-- FULL IMAGE -->
-<section class="full-image"
-style="background-image:url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6');">
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  © 2026 | E-Magazine Demo | Công ty XYZ
-</footer>
-
-</body>
-</html>
+    Trong
