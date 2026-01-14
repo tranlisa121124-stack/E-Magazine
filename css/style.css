@@ -1,4 +1,136 @@
-/* Nhúng config chung */
-@import url('config.css');
+:root{
+  --green-dark:#1F7A4D;
+  --green-light:#4ADE80;
+  --yellow:#FACC15;
+  --yellow-light:#FFFBEB;
+  --text:#2f2f2f;
+}
 
-/* Nếu muốn bài này có style riêng thì thêm ở đây */
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Montserrat', sans-serif;
+  color:var(--text);
+  background:var(--yellow-light);
+  line-height:1.8;
+}
+
+/* ===== HEADER ===== */
+.header{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  padding:20px 40px;
+  background:linear-gradient(90deg,var(--green-dark),var(--green-light));
+}
+
+.logo{
+  height:60px;
+  background:#fff;
+  padding:8px 14px;
+  border-radius:10px;
+}
+
+.header h1{
+  color:#fff;
+  font-size:1.4rem;
+}
+
+/* ===== HERO ===== */
+.hero{
+  height:80vh;
+  background:
+    linear-gradient(rgba(31,122,77,.7), rgba(250,204,21,.6)),
+    url("../images/cover.jpg") center/cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.hero-content h2{
+  font-family:'Playfair Display', serif;
+  font-size:3.2rem;
+  color:#fff;
+  max-width:900px;
+  padding:0 20px;
+}
+
+/* ===== CONTENT ===== */
+.content{
+  max-width:900px;
+  margin:100px auto;
+  padding:0 20px;
+  background:#fff;
+  border-radius:20px;
+  box-shadow:0 15px 40px rgba(0,0,0,.15);
+  padding-bottom:60px;
+}
+
+.content h3{
+  font-family:'Playfair Display', serif;
+  font-size:2.2rem;
+  color:var(--green-dark);
+  padding:50px 40px 20px;
+}
+
+.content img{
+  width:100%;
+  margin:30px 0;
+  border-radius:16px;
+}
+
+.content p{
+  padding:0 40px;
+  margin-top:20px;
+  font-size:1.05rem;
+}
+
+/* ===== FOOTER ===== */
+.footer{
+  margin-top:120px;
+  background:linear-gradient(180deg,var(--green-dark),#145c3a);
+  color:#f0fff4;
+  text-align:center;
+  padding:70px 20px 40px;
+}
+
+.footer-logo{
+  display:inline-block;
+  background:#fff;
+  padding:16px 30px;
+  border-radius:14px;
+  margin-bottom:20px;
+}
+
+.footer-logo img{
+  height:55px;
+}
+
+.footer-title{
+  font-weight:600;
+  font-size:1.1rem;
+}
+
+.footer-text{
+  max-width:600px;
+  margin:10px auto;
+  font-size:.95rem;
+}
+
+.footer-copy{
+  margin-top:30px;
+  font-size:.85rem;
+  opacity:.85;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+  .hero-content h2{font-size:2.2rem;}
+  .header{flex-direction:column;}
+}
