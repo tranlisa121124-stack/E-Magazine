@@ -1,178 +1,66 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<title>E-Magazine Khuyến nông Việt Nam</title>
+  <meta charset="UTF-8">
+  <title>E-Magazine Khuyến Nông</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
 
-<style>
-:root{
-  --green-dark:#1F7A4D;
-  --green-light:#4ADE80;
-  --yellow-light:#FDE68A;
-  --yellow-dark:#FACC15;
-  --cream:#FFFBEB;
-  --text:#2f2f2f;
-}
+<body>
 
-*{box-sizing:border-box;}
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <img src="images/logo.png" alt="Khuyến nông Việt Nam" class="logo">
+  <h1>E-MAGAZINE KHUYẾN NÔNG</h1>
+</header>
 
-body{
-  margin:0;
-  font-family:'Montserrat', sans-serif;
-  color:var(--text);
-  background:var(--cream);
-  line-height:1.85;
-}
-
-/* ================= HEADER ================= */
-header{
-  display:flex;
-  align-items:center;
-  gap:20px;
-  padding:20px 40px;
-  background:linear-gradient(90deg,var(--green-dark),var(--green-light));
-}
-header img{
-  height:60px;
-  background:#fff;
-  padding:8px 14px;
-  border-radius:10px;
-}
-header h1{
-  color:#fff;
-  font-size:1.4rem;
-  margin:0;
-}
-
-/* ================= COVER ================= */
-.cover{
-  height:90vh;
-  background:
-    linear-gradient(rgba(31,122,77,.7), rgba(250,204,21,.6)),
-    url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6") center/cover;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:20px;
-}
-.cover h2{
-  font-family:'Playfair Display', serif;
-  font-size:3.4rem;
-  color:#fff;
-  max-width:900px;
-}
-
-/* ================= CONTENT ================= */
-.section{
-  max-width:900px;
-  margin:auto;
-  padding:90px 20px;
-}
-.section img{
-  width:100%;
-  border-radius:14px;
-  margin:45px 0;
-  box-shadow:0 10px 30px rgba(0,0,0,.15);
-}
-
-/* ================= QUOTE ================= */
-.quote{
-  background:linear-gradient(90deg,var(--yellow-light),#fff);
-  border-left:6px solid var(--yellow-dark);
-  padding:30px;
-  font-size:1.6rem;
-  font-family:'Playfair Display', serif;
-  color:var(--green-dark);
-  margin:70px 0;
-  border-radius:12px;
-}
-
-/* ================= FULL IMAGE ================= */
-.full{
-  height:80vh;
-  background:
-    linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),
-    url("https://images.unsplash.com/photo-1598514982259-3fdfdd7b3c39") center/cover;
-}
-<!-- ====== CHƯƠNG 1 ====== -->
-<section class="section-white">
-  <div class="wrap">
-
-    <div class="chapter">Chương 1: Khi nông nghiệp bước vào kỷ nguyên số</div>
-
-    <p class="sapo">
-      Từ những thửa ruộng truyền thống, nông nghiệp Việt Nam đang
-      từng bước chuyển mình mạnh mẽ nhờ công nghệ, dữ liệu và đổi mới sáng tạo.
-    </p>
-
-    <div class="image-block">
-      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
-    </div>
-
-    <p>
-      Các mô hình khuyến nông số đã giúp người nông dân tiếp cận
-      nhanh hơn với kỹ thuật mới, giảm chi phí và nâng cao hiệu quả sản xuất.
-    </p>
-
-    <div class="quote-strong">
-      “Chuyển đổi số không làm mất đi bản sắc nông thôn,
-      mà giúp nông thôn phát triển bền vững hơn.”
-    </div>
-
+<!-- ===== HERO / COVER ===== -->
+<section class="hero">
+  <div class="hero-content">
+    <h2>Nông nghiệp xanh – sạch – bền vững</h2>
   </div>
 </section>
 
-<!-- ====== CHƯƠNG 2 ====== -->
-<section class="section-agri">
-  <div class="wrap">
+<!-- ===== BODY ===== -->
+<section class="content">
+  <h3>Trồng rau sạch thủy canh – Hướng đi bền vững cho nông thôn mới</h3>
 
-    <div class="chapter">Chương 2: Nông nghiệp xanh – giá trị bền vững</div>
+  <img src="images/hydroponic.jpg" alt="Trồng rau thủy canh">
 
-    <div class="grid-2">
-      <div>
-        <p>
-          Phát triển nông nghiệp xanh không chỉ là xu hướng,
-          mà là yêu cầu tất yếu trong bối cảnh biến đổi khí hậu.
-        </p>
+  <p>
+    Trong những năm gần đây, mô hình trồng rau sạch thủy canh
+    đang được nhiều địa phương khuyến khích phát triển.
+    Phương pháp này giúp kiểm soát tốt dinh dưỡng, hạn chế sâu bệnh,
+    tiết kiệm nước và không sử dụng thuốc bảo vệ thực vật.
+  </p>
 
-        <p>
-          Hệ thống khuyến nông quốc gia đóng vai trò
-          then chốt trong việc lan tỏa các mô hình canh tác
-          thân thiện với môi trường.
-        </p>
-      </div>
-
-      <div>
-        <img src="https://images.unsplash.com/photo-1598514982259-3fdfdd7b3c39">
-      </div>
-    </div>
-
-  </div>
+  <p>
+    Thông qua hoạt động khuyến nông, người nông dân được tập huấn kỹ thuật,
+    tiếp cận công nghệ mới và từng bước hình thành các mô hình
+    sản xuất nông nghiệp xanh, sạch, an toàn và bền vững.
+  </p>
 </section>
 
-<!-- ====== CHƯƠNG 3 ====== -->
-<section class="section-white">
-  <div class="wrap">
-
-    <div class="chapter">Chương 3: Đồng hành cùng người nông dân</div>
-
-    <p class="sapo">
-      Khuyến nông không chỉ là hướng dẫn kỹ thuật,
-      mà là quá trình đồng hành lâu dài cùng người nông dân.
-    </p>
-
-    <div class="image-block">
-      <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6">
-    </div>
-
-    <p>
-      Với sự hỗ trợ của công nghệ số và truyền thông đa phương tiện,
-      thông tin khuyến nông đang đến đúng người, đúng lúc,
-      góp phần xây dựng nền nông nghiệp hiện đại và bền vững.
-    </p>
-
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-logo">
+    <img src="images/logo.png" alt="Khuyến nông Việt Nam">
   </div>
-</section>
+
+  <p class="footer-title">KHUYẾN NÔNG VIỆT NAM</p>
+
+  <p class="footer-text">
+    Đồng hành cùng nông dân trong phát triển nông nghiệp xanh,
+    hiện đại và bền vững.
+  </p>
+
+  <p class="footer-copy">
+    © 1993 – 2026 | Khuyến nông Việt Nam
+  </p>
+</footer>
+
+</body>
+</html>
