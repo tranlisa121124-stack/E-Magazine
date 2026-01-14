@@ -1,88 +1,101 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>E-Magazine Khuyến Nông</title>
-
-  <link rel="stylesheet" href="css/style.css">
-
-  <!-- Font đẹp kiểu tạp chí -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<title>E-Magazine Khuyến Nông</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-<!-- ===== HEADER / COVER ===== -->
-<header class="cover-print">
-  <div class="cover-inner">
-
-    <div class="cover-top">
-      <span class="issue">SỐ 01 · 2026</span>
-      <span class="category">E-MAGAZINE KHUYẾN NÔNG</span>
-    </div>
-
-    <h1 class="cover-title">
-      NÔNG NGHIỆP XANH<br>
-      HÀNH TRÌNH BỀN VỮNG
-    </h1>
-
-    <p class="cover-subtitle">
-      Trồng rau thủy canh – Giải pháp sạch cho nông thôn hiện đại
-    </p>
-
-  </div>
+<header class="topbar">
+  <h1>E-MAGAZINE KHUYẾN NÔNG</h1>
+  <nav>
+    <button onclick="showArticle(1)">Số 01</button>
+    <button onclick="showArticle(2)">Số 02</button>
+    <button onclick="showArticle(3)">Số 03</button>
+  </nav>
 </header>
 
-<!-- ===== ARTICLE ===== -->
-<main class="article">
+<main class="layout">
 
-  <h2 class="article-title">
-    Trồng rau sạch thủy canh – Hướng đi mới cho nông thôn hiện đại
-  </h2>
+  <!-- NỘI DUNG BÀI -->
+  <section class="content">
 
-  <div class="article-layout">
-    <!-- ẢNH MINH HỌA -->
-    <div class="article-image">
-      <img src="images/hydroponic.jpg" alt="Trồng rau thủy canh">
+    <article class="article active" id="article1">
+      <h2>Nông nghiệp xanh – Hành trình bền vững</h2>
+      <img src="images/so1.jpg">
+      <p>
+        Nông nghiệp xanh là hướng đi tất yếu giúp bảo vệ môi trường,
+        nâng cao chất lượng nông sản và phát triển bền vững cho nông thôn Việt Nam.
+        Mô hình trồng rau thủy canh đang được nhân rộng tại nhiều địa phương.
+      </p>
+    </article>
+
+    <article class="article" id="article2">
+      <h2>Chuyển đổi số trong sản xuất nông nghiệp</h2>
+      <img src="images/so2.jpg">
+      <p>
+        Ứng dụng công nghệ số giúp nông dân quản lý sản xuất hiệu quả,
+        giảm chi phí và tăng năng suất. Nhiều hợp tác xã đã thành công
+        với mô hình nông nghiệp thông minh.
+      </p>
+    </article>
+
+    <article class="article" id="article3">
+      <h2>Nông thôn mới – Phát triển bền vững</h2>
+      <img src="images/so3.jpg">
+      <p>
+        Xây dựng nông thôn mới gắn với bảo vệ môi trường,
+        phát triển kinh tế và nâng cao đời sống người dân
+        là mục tiêu trọng tâm của các địa phương.
+      </p>
+    </article>
+
+  </section>
+
+  <!-- DANH SÁCH BÀI BÊN PHẢI -->
+  <aside class="sidebar">
+
+    <div class="post" onclick="showArticle(1)">
+      <img src="images/so1.jpg">
+      <div>
+        <h4>Số 01</h4>
+        <p>Nông nghiệp xanh, sạch, bền vững</p>
+      </div>
     </div>
 
-    <!-- NỘI DUNG -->
-    <div class="article-text">
-      <p>
-        Trong xu thế phát triển nông nghiệp xanh, mô hình trồng rau thủy canh
-        đang được nhiều địa phương áp dụng mạnh mẽ.
-        Phương pháp này giúp kiểm soát dinh dưỡng, giảm sâu bệnh
-        và đảm bảo an toàn thực phẩm.
-      </p>
-
-      <p>
-        Hệ thống thủy canh hiện đại cho phép cây trồng phát triển đồng đều,
-        tiết kiệm diện tích và đặc biệt giảm tới <strong>70% lượng nước</strong>
-        so với canh tác truyền thống.
-      </p>
-
-      <p>
-        Với sự đồng hành của ngành khuyến nông,
-        người nông dân từng bước tiếp cận công nghệ mới,
-        nâng cao thu nhập và xây dựng nền nông nghiệp
-        xanh – sạch – bền vững cho tương lai.
-      </p>
+    <div class="post" onclick="showArticle(2)">
+      <img src="images/so2.jpg">
+      <div>
+        <h4>Số 02</h4>
+        <p>Chuyển đổi số trong nông nghiệp</p>
+      </div>
     </div>
-  </div>
+
+    <div class="post" onclick="showArticle(3)">
+      <img src="images/so3.jpg">
+      <div>
+        <h4>Số 03</h4>
+        <p>Nông thôn mới – Hành trình đổi thay</p>
+      </div>
+    </div>
+
+  </aside>
 
 </main>
 
-<!-- ===== FOOTER ===== -->
 <footer class="footer">
-  <div class="footer-line"></div>
-  <p class="footer-title">KHUYẾN NÔNG VIỆT NAM</p>
-  <p class="footer-text">
-    Đồng hành cùng nông dân phát triển nông nghiệp hiện đại
-  </p>
-  <p class="footer-copy">© 2026 – E-Magazine Khuyến Nông</p>
+  © 2026 E-Magazine Khuyến Nông
 </footer>
+
+<script>
+function showArticle(n){
+  document.querySelectorAll('.article')
+    .forEach(a => a.classList.remove('active'));
+  document.getElementById('article'+n)
+    .classList.add('active');
+}
+</script>
 
 </body>
 </html>
-
