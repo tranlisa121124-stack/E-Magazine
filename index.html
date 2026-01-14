@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>E-Magazine Khuyến nông Việt Nam</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --green-dark:#1F6E43;
+  --green-light:#2FBF71;
+  --gray-text:#333;
+}
+
+body{
+  margin:0;
+  font-family:'Merriweather', serif;
+  color:var(--gray-text);
+  line-height:1.9;
+}
+
+/* HEADER */
+header{
+  display:flex;
+  align-items:center;
+  padding:20px 40px;
+  background:#fff;
+  border-bottom:1px solid #eee;
+}
+header img{
+  height:60px;
+  margin-right:20px;
+}
+header h1{
+  font-size:1.5rem;
+  color:var(--green-dark);
+}
+
+/* COVER */
+.cover{
+  height:90vh;
+  background:
+    linear-gradient(120deg, rgba(31,110,67,.9), rgba(47,191,113,.7)),
+    url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6") center/cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+}
+.cover h2{
+  font-size:3.5rem;
+  max-width:900px;
+}
+
+/* CONTENT */
+.section{
+  max-width:900px;
+  margin:auto;
+  padding:80px 20px;
+}
+.section img{
+  width:100%;
+  border-radius:10px;
+  margin:40px 0;
+}
+
+/* QUOTE */
+.quote{
+  border-left:6px solid var(--green-light);
+  padding-left:25px;
+  font-size:1.8rem;
+  color:var(--green-dark);
+  margin:60px 0;
+}
+
+/* FULL IMAGE */
+.full{
+  height:80vh;
+  background:url("https://images.unsplash.com/photo-1598514982259-3fdfdd7b3c39") center/cover;
+}
+
+/* FOOTER */
+footer{
+  background:var(--green-dark);
+  color:#e5f5ec;
+  text-align:center;
+  padding:40px 20px;
+}
+footer img{
+  height:50px;
+  margin-bottom:10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="logo.png" alt="Khuyến nông Việt Nam">
+  <h1>E-Magazine Khuyến nông Việt Nam</h1>
+</header>
+
+<section class="cover">
+  <h2>Chuyển đổi số trong nông nghiệp – Từ ruộng đồng đến dữ liệu</h2>
+</section>
+
+<section class="section">
+  <p>
+    Trải qua hơn ba thập kỷ hình thành và phát triển,
+    hệ thống khuyến nông Việt Nam đã và đang giữ vai trò
+    cầu nối giữa tri thức khoa học và người nông dân.
+  </p>
+
+  <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+
+  <div class="quote">
+    “Khuyến nông không chỉ là hướng dẫn kỹ thuật,
+    mà là đồng hành cùng người nông dân trong kỷ nguyên số.”
+  </div>
+
+  <p>
+    Ứng dụng công nghệ số, dữ liệu lớn và truyền thông đa phương tiện
+    đang giúp công tác khuyến nông lan tỏa nhanh hơn,
+    chính xác hơn và bền vững hơn.
+  </p>
+</section>
+
+<section class="full"></section>
+
+<footer>
+  <img src="logo.png">
+  <p>Khuyến nông Việt Nam – Thành lập 1993</p>
+</footer>
+
+</body>
+</html>
