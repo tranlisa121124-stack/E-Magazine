@@ -13,39 +13,69 @@ body {
 }
 
 /* ===== HERO / COVER ===== */
+/* ===== HERO / COVER SẮC NÉT – ÁNH NẮNG ===== */
+
 .hero {
+  position: relative;
   height: 90vh;
-  background:
-    linear-gradient(180deg, rgba(16,185,129,0.75), rgba(250,204,21,0.65)),
-    url("../images/cover.jpg") center/cover no-repeat;
+  background: url("../images/cover.jpg") center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  overflow: hidden;
+}
+
+/* lớp tăng độ nét ảnh */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../images/cover.jpg") center/cover no-repeat;
+  filter: brightness(1.05) contrast(1.15) saturate(1.2);
+  z-index: 0;
+}
+
+/* ánh nắng vàng phía trên */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top center,
+      rgba(255, 235, 170, 0.45),
+      transparent 60%);
+  z-index: 1;
 }
 
 .hero-content {
-  color: #fff;
+  position: relative;
+  z-index: 2;
   padding: 30px;
 }
 
 .hero-logo {
   height: 90px;
   margin-bottom: 20px;
-  filter: drop-shadow(0 6px 12px rgba(0,0,0,.35));
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,.45));
 }
 
 .hero h1 {
   font-family: "Playfair Display", serif;
-  font-size: 3.5rem;
+  font-size: 3.6rem;
+  color: #ffffff;
   letter-spacing: 2px;
   margin-bottom: 12px;
-  text-shadow: 0 8px 20px rgba(0,0,0,.45);
+  text-shadow:
+    0 4px 12px rgba(0,0,0,.35),
+    0 0 25px rgba(253,224,71,.35);
 }
 
 .hero p {
   font-size: 1.3rem;
   font-weight: 500;
+  color: #fffbe6;
+  text-shadow: 0 4px 10px rgba(0,0,0,.35);
 }
 
 /* ===== ARTICLE ===== */
@@ -146,3 +176,4 @@ body {
     font-size: 2.2rem;
   }
 }
+
