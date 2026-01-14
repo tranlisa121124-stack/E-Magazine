@@ -1,0 +1,64 @@
+:root {
+  --main-font: 'Georgia', 'Times New Roman', serif;
+  --main-bg: #f4f4f4;
+  --cover-text-color: white;
+  --content-bg: #ffffff;
+  --content-text-color: #000000;
+  --box-border-color: #c39f77;
+  --box-bg: #fffaf0;
+}
+
+body {
+  margin: 0;
+  font-family: var(--main-font);
+  background: var(--main-bg);
+}
+
+.cover {
+  position: relative;
+  text-align: center;
+  color: var(--cover-text-color);
+}
+
+.cover img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cover h1 {
+  position: absolute;
+  bottom: 120px;
+  width: 100%;
+  font-size: 48px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+}
+
+.cover .sapo {
+  position: absolute;
+  bottom: 60px;
+  width: 100%;
+  font-size: 20px;
+}
+
+.content {
+  max-width: 760px;
+  margin: 40px auto;
+  background: var(--content-bg);
+  color: var(--content-text-color);
+  padding: 30px;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.content img {
+  width: 100%;
+  margin: 30px 0;
+}
+
+.box-border {
+  border: 2px solid var(--box-border-color);
+  padding: 20px;
+  border-radius: 12px;
+  background: var(--box-bg);
+}
