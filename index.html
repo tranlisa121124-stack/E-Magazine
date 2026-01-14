@@ -9,75 +9,62 @@
 
 <header class="topbar">
   <h1>E-MAGAZINE KHUYẾN NÔNG</h1>
-  <nav>
-    <button onclick="showArticle(1)">Số 01</button>
-    <button onclick="showArticle(2)">Số 02</button>
-    <button onclick="showArticle(3)">Số 03</button>
-  </nav>
 </header>
 
-<main class="layout">
+<main class="magazine">
 
-  <!-- NỘI DUNG BÀI -->
-  <section class="content">
+  <!-- ===== BÀI VIẾT ===== -->
+  <section class="articles">
 
-    <article class="article active" id="article1">
-      <h2>Nông nghiệp xanh – Hành trình bền vững</h2>
+    <article id="so1" class="article active">
+      <h1>Nông nghiệp xanh – Hành trình bền vững</h1>
       <img src="images/so1.jpg">
       <p>
-        Nông nghiệp xanh là hướng đi tất yếu giúp bảo vệ môi trường,
-        nâng cao chất lượng nông sản và phát triển bền vững cho nông thôn Việt Nam.
-        Mô hình trồng rau thủy canh đang được nhân rộng tại nhiều địa phương.
+        Nông nghiệp xanh là xu hướng tất yếu nhằm bảo vệ môi trường
+        và nâng cao chất lượng nông sản.
+      </p>
+      <p>
+        Mô hình trồng rau thủy canh giúp tiết kiệm nước,
+        hạn chế sâu bệnh và đảm bảo an toàn thực phẩm.
       </p>
     </article>
 
-    <article class="article" id="article2">
-      <h2>Chuyển đổi số trong sản xuất nông nghiệp</h2>
+    <article id="so2" class="article">
+      <h1>Chuyển đổi số trong nông nghiệp</h1>
       <img src="images/so2.jpg">
       <p>
-        Ứng dụng công nghệ số giúp nông dân quản lý sản xuất hiệu quả,
-        giảm chi phí và tăng năng suất. Nhiều hợp tác xã đã thành công
-        với mô hình nông nghiệp thông minh.
+        Công nghệ số đang tạo ra bước đột phá trong quản lý
+        và tiêu thụ nông sản tại nhiều địa phương.
       </p>
     </article>
 
-    <article class="article" id="article3">
-      <h2>Nông thôn mới – Phát triển bền vững</h2>
+    <article id="so3" class="article">
+      <h1>Nông thôn mới – Hành trình đổi thay</h1>
       <img src="images/so3.jpg">
       <p>
-        Xây dựng nông thôn mới gắn với bảo vệ môi trường,
-        phát triển kinh tế và nâng cao đời sống người dân
-        là mục tiêu trọng tâm của các địa phương.
+        Xây dựng nông thôn mới giúp thay đổi diện mạo làng quê,
+        nâng cao đời sống vật chất và tinh thần của người dân.
       </p>
     </article>
 
   </section>
 
-  <!-- DANH SÁCH BÀI BÊN PHẢI -->
+  <!-- ===== SIDEBAR ===== -->
   <aside class="sidebar">
 
-    <div class="post" onclick="showArticle(1)">
-      <img src="images/so1.jpg">
-      <div>
-        <h4>Số 01</h4>
-        <p>Nông nghiệp xanh, sạch, bền vững</p>
-      </div>
+    <div class="post" onclick="show('so1')">
+      <h4>Số 01</h4>
+      <p>Nông nghiệp xanh – bền vững</p>
     </div>
 
-    <div class="post" onclick="showArticle(2)">
-      <img src="images/so2.jpg">
-      <div>
-        <h4>Số 02</h4>
-        <p>Chuyển đổi số trong nông nghiệp</p>
-      </div>
+    <div class="post" onclick="show('so2')">
+      <h4>Số 02</h4>
+      <p>Chuyển đổi số nông nghiệp</p>
     </div>
 
-    <div class="post" onclick="showArticle(3)">
-      <img src="images/so3.jpg">
-      <div>
-        <h4>Số 03</h4>
-        <p>Nông thôn mới – Hành trình đổi thay</p>
-      </div>
+    <div class="post" onclick="show('so3')">
+      <h4>Số 03</h4>
+      <p>Nông thôn mới hiện đại</p>
     </div>
 
   </aside>
@@ -89,11 +76,10 @@
 </footer>
 
 <script>
-function showArticle(n){
+function show(id){
   document.querySelectorAll('.article')
     .forEach(a => a.classList.remove('active'));
-  document.getElementById('article'+n)
-    .classList.add('active');
+  document.getElementById(id).classList.add('active');
 }
 </script>
 
